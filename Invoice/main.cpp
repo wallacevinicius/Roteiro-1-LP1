@@ -52,6 +52,6 @@ int main(){
 
 	cout << "TOTAL: R$" << total << "------------------------------" << "\n" << endl;
 
-	delete(fatura);
+	delete fatura;
 	return 0;
 }

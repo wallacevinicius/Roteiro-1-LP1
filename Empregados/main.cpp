@@ -21,4 +21,7 @@ int main(){
 
 	cout << "Nome: " << e1->getNome() << endl << "Sobrenome: " << e1->getSobrenome() << endl << "Salario Anual: R$" << (e1->getSalario()*12) + (e1->getSalario()*0.1) << endl << endl;
 	cout << "Nome: " << e2->getNome() << endl << "Sobrenome: " << e2->getSobrenome() << endl << "Salario Anual: R$" << (e2->getSalario()*12) + (e2->getSalario()*0.1)<< endl;
+
+	delete e1;
+	delete e2;
 }

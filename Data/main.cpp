@@ -36,7 +36,7 @@ int main(){
 
 	cout << "/" << data->getAno() << endl;
 
-	delete(data);
+	delete data;
 
 	return 0;
 }

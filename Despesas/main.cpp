@@ -47,5 +47,5 @@ int main(){
 		cout << "Não existe despesa com esse tipo!" << endl;
 	}
 
-	delete(despesa);	
+	delete despesa;	
 }
