@@ -24,35 +24,39 @@ void Data::avancarData(){
 }
 
 void Data::avancarDataIndice(int indice){
-	while(indice){
-		if(this->mes == 1 or this->mes == 3 or this->mes == 5 or this->mes == 7 or this->mes == 8 or this->mes == 10 or this->mes == 12){
-			if(this->dia + indice <= 31){
-				this->dia += indice;
-				break;
-			}else{
-				indice -= 31 - this->dia + 1;
-				this->dia = 1;
-				this->mes++;
-			}
-		}else if(this->mes != 2){
-			if(this->dia + indice <= 30){
-				this->dia += indice;
-				break;
-			}else{
-				indice -= 30 - this->dia + 1;
-				this->dia = 1;
-				this->mes++;
-			}
-		}else if(this->mes == 2){
-			if(this->dia + indice <= 28){
-				this->dia += indice;
-				break;
-			}else{
-				indice -= 28 - this->dia + 1;
-				this->dia = 1;
-				this->mes++;
-			}
+	if(this->mes==4 || this->mes==6 || this->mes==4||this->mes==9||this->mes==11){
+		if(this->dia!=30){
+			cout<< this->dia+1 <<" / "<<this->mes<<" / "<<this->ano<<"\n";
 		}
+		else if(dia==31){
+			cout<<"Data Inexistente!\n";
+		}
+		else{
+			cout<<"01 / "<<this->mes+1<< " / "<<this->ano<<"\n";
+		}
+	}
+	else if(this->mes==2){
+
+		if(this->dia!=28 && this->dia !=29){
+			cout<<this->dia+1<<" / 02 / "<<this->ano<<" \n";
+		}
+		else{
+			if(this->mes==2 && this->ano%4==0){
+				if(this->dia==29){
+					cout<<"01 / 03 / "<<this->ano<<"\n";
+				}
+				else{
+					cout<<"29 / 02 / "<<this->ano<<"\n";
+				}
+			}
+
+		}
+	}
+	else if(this->mes==12 && this->dia==31){
+		cout<<"01 / 01 / "<<this->ano+1<<"\n";
+	}
+	else{
+		cout<<dia+1 <<" / "<<mes<<" / "<<ano<<"\n";
 	}
 }
 
